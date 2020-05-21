@@ -21,7 +21,7 @@ class Branch(Base):
     name = models.CharField(max_length=256)
     address = models.CharField(max_length=256)
     pincode = models.PositiveIntegerField()
-    area_square_meters = models.PositiveIntegerField() # Area of company in Square-Meters
+    area = models.DecimalField(decimal_places=5, max_digits=15, default=None) # Area of company in Square-Meters
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
     city = models.ForeignKey(City, on_delete=models.CASCADE)
 
