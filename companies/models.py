@@ -2,28 +2,28 @@ from django.db import models
 
 # Create your models here.
 
-from base.models import BaseModel
+from base.models import Base
 #from base.includes import *
-from city.models import City
+from cities.models import City
 
-class Company(BaseModel):
+class Company(Base):
     """
     """
-    name = models.CharField()
+    name = models.CharField(max_length=256)
     #address = models.CharField()
     #pincode = models.PositiveIntegerField()
     #area_square_meters = models.PositiveIntegerField() # Area of company in Square-Meters
 
 
-class Branch(BaseModel):
+class Branch(Base):
     """
     """
-    name = models.CharField()
-    address = models.CharField()
+    name = models.CharField(max_length=256)
+    address = models.CharField(max_length=256)
     pincode = models.PositiveIntegerField()
     area_square_meters = models.PositiveIntegerField() # Area of company in Square-Meters
-    company = models.ForeignKey(Company)
-    city = models.ForeignKey(City)
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    city = models.ForeignKey(City, on_delete=models.CASCADE)
 
     #contact_number
     #contact_email
