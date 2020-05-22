@@ -1,4 +1,8 @@
 
+import math
+import constants
+
+
 # Check for 
 # How many People should be allowed,
 # In Which City
@@ -16,11 +20,44 @@ def number_of_people_working_in_city():
 
 def minimum_distance_to_be_maintained():
     """Distance in meters"""
-    min_dist_from_each_other = 6
-    return min_dist_from_each_other
+    return constants.MIN_DISTANCE_TO_BE_MAINTAINED_FROM_EACH_OTHER
 
-def city_can_handle():
-    handle = 1
+#def how_much_can_be_handled(area_of_the_place):
+#    """
+#    Actual Algo to calculate 
+#    How many people can be allowed 
+#    to be out at 1 point in time
+#    """
+#    first_number = area_of_city/minimum_distance_to_be_maintained()
+#    if first_number < 1:
+#        handle = 1
+#    else:
+#        handle = math.ceil(handle)
+#        handle = pow(handle, handle)
+#    return handle
+
+def how_many_can_be_handled(area):
+    """
+    area in SquareMeters
+    minimum_distance_to_be_maintained in Meters
+    """
+    # Getting the 
+    #number_of_points = area/minimum_distance_to_be_maintained()
+    # Getting the Quotient
+    number_of_points = area//minimum_distance_to_be_maintained()
+    # If its exactly half or Greater than Half
+    # Then, the NumberOfPoints will be 2 points at each of the distance + 1 point at the origin
+    # And, NumberOfPeople is  SquareTheValueOf(NumberOfPoints)
+    if number_of_points == 2 or number_of_points > 2:
+        number_of_points += 1
+        #allowed = pow(number_of_points, number_of_points)
+    # If division greater than half_of_area, so division less than 2
+    # Then, NumberOfPoints will Most Probably 1 + 1 At Origin
+    # NumberOfPeople is SquareTheValueOf(NumberOfPoints)
+    else if number_of_points < 2: 
+        number_of_points = 2
+
+    handle = pow(number_of_points, 2)
     return handle
 
 def check_for_previous_people_not_given_chance_allow_them():
