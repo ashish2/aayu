@@ -38,13 +38,16 @@ def minimum_distance_to_be_maintained():
 
 def how_many_can_be_handled(area):
     """
-    area in SquareMeters
+    area: area of any place/company etc in SquareMeters
     minimum_distance_to_be_maintained in Meters
     """
+    # Since area is in SquareMeters, 
+    # We will first find the SquareRoot of it
+    sqrt_of_area = math.sqrt(area)
     # Getting the 
     #number_of_points = area/minimum_distance_to_be_maintained()
     # Getting the Quotient
-    number_of_points = area//minimum_distance_to_be_maintained()
+    number_of_points = sqrt_of_area//minimum_distance_to_be_maintained()
     # If its exactly half or Greater than Half
     # Then, the NumberOfPoints will be 2 points at each of the distance + 1 point at the origin
     # And, NumberOfPeople is  SquareTheValueOf(NumberOfPoints)
