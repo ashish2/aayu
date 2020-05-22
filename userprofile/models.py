@@ -9,6 +9,7 @@ from companies.models import Branch
 class UserProfile(BaseModel):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     phone = models.PositiveIntegerField(10)
+    work_type = models.CharField(default=None)
     branch = models.ForeignKey(Branch)
     city = models.ForeignKey(City)
     
