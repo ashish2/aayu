@@ -2,10 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
+from cities.models import City
 
 def index(request):
-    #return render("Hello, World!")
-    return HttpResponse("Hello, World!")
+    cities = City.objects.all()
+
+    return render(cities)
 
 
 

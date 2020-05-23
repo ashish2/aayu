@@ -14,6 +14,9 @@ class Company(Base):
     #pincode = models.PositiveIntegerField()
     #area_square_meters = models.PositiveIntegerField() # Area of company in Square-Meters
 
+    def __str__(self):
+        return self.name
+
 
 class Branch(Base):
     """
@@ -28,4 +31,5 @@ class Branch(Base):
     #contact_number
     #contact_email
     def __str__(self):
-        return self.name + " , City: " + self.city.name
+        return self.name + " , in city: " + self.city.name.capitalize()
+

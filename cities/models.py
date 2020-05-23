@@ -6,6 +6,10 @@ from base.models import Base
 class State(Base):
     name = models.CharField(max_length=256)
 
+    def __str__(self):
+        return self.name.capitalize()
+
+
 class City(Base):
     name = models.CharField(max_length=256)
     latitude = models.DecimalField(decimal_places=7, max_digits=10)
@@ -13,6 +17,9 @@ class City(Base):
     state = models.ForeignKey(State, on_delete=models.CASCADE)
     #area_square_meters = models.PositiveIntegerField() # Area in Square-KiloMeters, Mumbai=603.4 SqKilo
     area = models.DecimalField(decimal_places=5, max_digits=15, default=None) # Area in Square-KiloMeters, Mumbai=603.4 SqKilo
+
+    def __str__(self):
+        return self.name.capitalize()
 
 
 #class CityBranch(BaseModel):
