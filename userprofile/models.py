@@ -15,11 +15,11 @@ class UserProfile(Base):
         LA = ('LA', 'LABOUR'),
         IT = ('IT', 'INFO TECH')
 
-    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    phone = models.PositiveIntegerField(10, default=None)
-    work_type = models.CharField( choices=WorkType.choices, default=WorkType.LA)
-    branch = models.ForeignKey(Branch, default=1)
-    city = models.ForeignKey(City, default=1)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    phone = models.PositiveIntegerField(10, default=None, null=True)
+    work_type = models.CharField(max_length=16,choices=WorkType.choices, default=WorkType.LA)
+    branch = models.ForeignKey(Branch, default=1, on_delete=models.CASCADE)
+    city = models.ForeignKey(City, default=1, on_delete=models.CASCADE)
     
     #location = models.CharField(max_length=30, blank=True)
     #birthdate = models.DateField(null=True, blank=True)
@@ -36,7 +36,7 @@ def create_user_profile(sender, instance, created, **kwargs):
 
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
+    instance.userprofile.save()
 
 
 

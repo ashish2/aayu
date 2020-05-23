@@ -27,3 +27,5 @@ class Branch(Base):
 
     #contact_number
     #contact_email
+    def __str__(self):
+        return self.name + " , City: " + self.city.name

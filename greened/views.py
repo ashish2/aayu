@@ -7,3 +7,5 @@ def index(request):
     #return render("Hello, World!")
     return HttpResponse("Hello, World!")
 
+
+
