@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.contrib.auth.models import User
-from base.models import BaseModel
+from base.models import Base
 from cities.models import City
 from companies.models import Branch
 

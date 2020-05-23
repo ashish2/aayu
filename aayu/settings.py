@@ -128,5 +128,5 @@ STATIC_URL = '/static/'
 
 DJANGO_SETTINGS_MODULE='aayu.settings'
 #settings.configure()
-AUTH_USER_MODEL=''
+#AUTH_USER_MODEL=''
 
