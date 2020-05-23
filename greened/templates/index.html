@@ -1,0 +1,33 @@
+<div 
+	style="background-color: lightgreen"
+>
+	<h2>
+		Go To <a href="/">Home</a>
+	</h2>
+</div>
+
+<div
+	style="background-color: lightgreen"
+>
+	<h3>
+		The City of {{city.name}} has these Companies with their particular branches.
+		<br />
+		Please select a company branch, to see:
+			<ol>
+				<li>
+					How much is the Company Office area in Square Meters
+				</li>
+				<li>
+					And How many people at the Max can be allowed in that Square Meter of Area, at the same time?
+				</li>
+			</ol>
+
+	</h3>
+	{% for v in data %}
+
+	<div>
+		<a href="/greened/city/{{v.id}}/">{{v.name}}</a>
+	</div>
+
+	{% endfor %}
+</div>

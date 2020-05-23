@@ -1,0 +1,20 @@
+<div 
+	style="background-color: lightgreen"
+>
+	<h2>
+		Go To <a href="/">Home</a>
+	</h2>
+</div>
+
+<div
+	style="background-color: lightgreen"
+>
+	<h3>Data available for the following cities, please click on a city and see the companies inside that city and the company details</h3>
+	{% for v in cities %}
+
+	<div>
+		<a href="/greened/city/{{v.id}}/">{{v.name}}</a>
+	</div>
+
+	{% endfor %}
+</div>

@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #A
     path('greened/', include('greened.urls')),
+    path('', include('greened.urls')),
     #A
 ]
