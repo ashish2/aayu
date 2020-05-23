@@ -6,8 +6,8 @@ from base.models import BaseModel
 from cities.models import City
 from companies.models import Branch
 
-class UserProfile(BaseModel):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+class UserProfile(Base):
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     phone = models.PositiveIntegerField(10)
     work_type = models.CharField(default=None)
     branch = models.ForeignKey(Branch)

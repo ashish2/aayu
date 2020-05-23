@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'cities',
     'companies',
     'greened',
-    'identification'
+    'identification',
+    'userprofile'
     #Add/
 ]
 
@@ -127,4 +128,5 @@ STATIC_URL = '/static/'
 
 DJANGO_SETTINGS_MODULE='aayu.settings'
 #settings.configure()
+AUTH_USER_MODEL=''
 
