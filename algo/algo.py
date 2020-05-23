@@ -1,6 +1,6 @@
 
 import math
-import constants
+from . import constants
 
 
 # Check for 
@@ -57,7 +57,7 @@ def how_many_can_be_handled(area):
     # If division greater than half_of_area, so division less than 2
     # Then, NumberOfPoints will Most Probably 1 + 1 At Origin
     # NumberOfPeople is SquareTheValueOf(NumberOfPoints)
-    else if number_of_points < 2: 
+    elif number_of_points < 2: 
         number_of_points = 2
 
     handle = pow(number_of_points, 2)

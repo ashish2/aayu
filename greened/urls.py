@@ -10,6 +10,7 @@ urlpatterns = [
             #CitiesView.as_view()
             #CityListView.as_view()
         #),
+        path('greened/city/<int:city_id>/branch/<int:branch_id>/', branch_people, name="branch_people"),
         path('greened/city/<int:city_id>/', details, name="details"),
         path('greened/', index, name='index'),
         path('', index, name='index'),

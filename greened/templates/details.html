@@ -9,11 +9,28 @@
 <div
 	style="background-color: lightgreen"
 >
-	<h3>Data available for the following cities, please click on a city and see the companies inside that city and the company details</h3>
-	{% for v in cities %}
+	<h3>
+		The City of {{city.name}} has these Companies with their particular branches.
+		<br />
+		Please select a company branch, to see:
+			<ol>
+				<li>
+					How much is the Company Office area in Square Meters
+				</li>
+				<li>
+					And How many people at the Max can be allowed in that Square Meter of Area, at the same time?
+				</li>
+			</ol>
+
+	</h3>
+	{% for v in branches %}
 
 	<div>
-		<a href="/greened/city/{{v.id}}/">{{v.name}}</a>
+		<a href="/greened/city/{{city.id}}/branch/{{v.id}}">
+			{{v.company.name}} at {{v.address.capitalize}}
+		</a>
+			with an Area of {{v.area}} Square Meters 
+			Number of People working: {{branch.userprofile_set.count}}
 	</div>
 
 	{% endfor %}

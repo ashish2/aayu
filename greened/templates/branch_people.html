@@ -1,0 +1,99 @@
+<div 
+	style="background-color: lightgreen"
+>
+	<h2>
+		Go To <a href="/">Home</a>
+	</h2>
+</div>
+
+<div
+	style="background-color: lightgreen"
+>
+
+<!--
+The branch of Company {{branch.company}}
+at {{branch.address}}
+has {{branch.userprofile_set.count}} number of people working
+with and Area of {{branch.area}} Square Meters.
+With the minimum distance to be maintained at {{min_dist}},
+The Max Number of People this Company Branch can handle is {{handle}}
+-->
+
+	<div>
+		<b>
+			Area of the Company {{branch.company.name}} at {{branch.address}} in Square-Meters? 
+			<i 
+				style="background-color: yellow"
+			>
+				{{branch.area}} 
+			</i>
+			Square-Meters
+		</b>
+		<br />
+		<br />
+		<b>
+		Number of People working?
+			<i 
+				style="background-color: yellow"
+			>
+		{{branch.userprofile_set.count}}
+			</i>
+		</b>
+		<br />
+		<br />
+		<b>
+			Minimum Distance to be Maintained from Each Other?
+			<i 
+				style="background-color: yellow"
+			>
+			{{min_dist}} 
+			Meters
+			</i>
+		</b>
+		<br />
+		<br />
+		<b>
+			According to the algorithm in an Area of 
+			<i 
+				style="background-color: yellow"
+			>
+			{{branch.area}} 
+			</i>
+			SqMeters, 
+			<br />
+			<br />
+			The Max number of people working simultaneously can be: At Max 
+			<i 
+				style="background-color: yellow"
+			>
+				{{handle}}
+			</i> People.
+			<br />
+			<br />
+			Who have the best probablity, to always be 
+			<i 
+				style="background-color: yellow"
+			>
+			{{min_dist}} 
+			</i>
+			Meters away from Each Other.
+		<br />
+		</b>
+	</div>
+	<br />
+	<h4>
+		This is a demonstration of areas at modest levels.
+		<br />
+		<br />
+		In this same manner, these Algorithms can scale and be applied to any Place/Space/Area/Locality/Street/City at larger levels.
+		<br />
+		<br />
+		For eg. If there is a DMart store in Borivali, which has "x" SqMeter area, we can figure out, 
+		<br />
+		<br />
+		What should be the max Number of People who can be inside the Store simutaneously at the same time.
+		<br />
+		<br />
+		Same goes for larger places like Street/Locality/City etc. 
+		<br />
+</div>
