@@ -21,7 +21,7 @@ The Max Number of People this Company Branch can handle is {{handle}}
 
 	<div>
 		<b>
-			Area of the Company {{branch.company.name}} at {{branch.address}} in Square-Meters? 
+			Area of the place {{branch.company.name}} at {{branch.address}} in Square-Meters? 
 			<i 
 				style="background-color: yellow"
 			>
@@ -62,14 +62,13 @@ The Max Number of People this Company Branch can handle is {{handle}}
 			SqMeters, 
 			<br />
 			<br />
-			The Max number of people working simultaneously can be: At Max 
+			The Max number of people working at this place simultaneously can be: At Max 
 			<i 
 				style="background-color: yellow"
 			>
 				{{handle}}
 			</i> 
-			People. 
-			<br />
+			People.
 			<br />
 			Who have the best probablity, to always be 
 			<i 
@@ -78,6 +77,26 @@ The Max Number of People this Company Branch can handle is {{handle}}
 			{{min_dist}} 
 			</i>
 			Meters apart from Each Other.
+			<br />
+			But out of these only 
+			<i 
+				style="background-color: yellow"
+			>
+			{{allowed_handle}} 
+			</i>
+			are in need, for reasons, like, type of work like they maybe Labour class, 
+			Urgency of work, Importance of work/position, Need etc.
+			<br />
+			So they can be given higher priority for a Pass/QR Code to come out of their homes.
+			<br />
+			The rest of 
+			<i 
+				style="background-color: yellow"
+			>
+			{{not_allowed_handle}}
+			</i>
+			are at a lower priority to have a need to come out of their homes, 
+			for the same reasons, like Type of work, Urgency of work, Importance, Need.
 		<br />
 		</b>
 		<h3>
@@ -89,11 +108,11 @@ The Max Number of People this Company Branch can handle is {{handle}}
 			<i 
 				style="background-color: yellow"
 			>
-				{{handle}}
+				{{allowed_handle}}
 			</i> 
-			can be selected At Max to come out of their homes to work in this office, 
+			can be selected At Max to come out of their homes to work at this place, 
 			<br />
-			whether they are Labour worker in this company, IT, Management or any other.
+			whether they are Labour worker at this place, IT, Management or any other.
 		</b>
 	</div>
 	<br />
