@@ -26,7 +26,8 @@ class UserProfile(Base):
     #role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, null=True, blank=True)
 
     def __str__(self):  # __unicode__ for Python 2
-        return self.user.username
+        return self.user.username + " " + self.work_type
+
 
 # SAVE SIGNAL
 @receiver(post_save, sender=User)
